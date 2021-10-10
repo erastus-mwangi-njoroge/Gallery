@@ -1,0 +1,15 @@
+{%extends 'photoviewer/base.html'%} 
+{% block content %}
+<div class="container">
+	<div class="row">
+<div class="gallery">
+    {% for data in Image%}
+  <figure>
+    <img src="{{data.image.url}}" alt="{{data.name}}" />
+    <figcaption>{{data.name}} 
+        <small><strong>Description: {{data.description}}</strong></small>
+        <small><strong>Uploaded at </strong>  {{data.time}},<strong>by</strong>{{data.uploader}}</small>
+        <small>{{data.location}}</small>
+    </figcaption>
+  </figure>
+    {% endfor %}
