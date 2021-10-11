@@ -5,7 +5,7 @@
 <div class="gallery">
     {% for data in Image%}
   <figure>
-    <img src="{{data.image.url}}" alt="{{data.name}}" />
+    <img src="{{data.image.url}}"  width = "200" alt="{{data.name}}"/>
     <figcaption>{{data.name}} 
         <small><strong>Description: {{data.description}}</strong></small>
         <small><strong>Uploaded at </strong>  {{data.time}},<strong>by</strong>{{data.uploader}}</small>
@@ -13,4 +13,5 @@
     </figcaption>
   </figure>
     {% endfor %}
+
     {%endblock%}
