@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpRequest,Http404
-from .models import Image,Location,Category
+from .models import Location, Category, Image
 
 def display_image(request):
     imageResults= Image.objects.all()
