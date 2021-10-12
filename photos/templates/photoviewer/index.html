@@ -3,7 +3,7 @@
 <div class="container">
 	<div class="row">
 <div class="gallery">
-    {% for data in Image%}
+    {% for data in imageResults%}
   <figure>
     <img src="{{data.photoling.url}}" width="250" height="250" alt="{{data.name}}"/>
     <figcaption>{{data.name}} <br>
