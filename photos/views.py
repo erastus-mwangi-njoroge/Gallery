@@ -4,4 +4,4 @@ from .models import Location, Category, Image
 
 def display_image(request):
     imageResults= Image.objects.all()
-    return render(request,"photoviewer/index.html",{'Image':imageResults})
+    return render(request,"photoviewer/index.html",{'imageResults':imageResults})
