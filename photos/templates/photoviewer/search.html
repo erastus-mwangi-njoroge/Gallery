@@ -1,0 +1,37 @@
+{%extends 'photoviewer/base.html'%} 
+{% block content %}
+<div class="container">
+
+  <div class="row">
+    {% if images%}
+      <h2>Found {{ images|length }} of searched term {{message}}</h2>
+    {% else %}
+      <h2> Found 0 images for the search term {{message}}</h2>
+    {% endif %}
+
+  </div>
+
+  <div class="row">
+
+  {% if images %}
+    {% for image in images %}
+    <div class="container">
+        <div class="row">
+    <div class="gallery">
+    <figure>
+        <img src="{{image.photoling.url}}" width="250" height="250" alt="{{image.name}}"/>
+        <figcaption>{{image.name}} <br>
+            <small><strong>Description: {{image.description}}</strong></small>
+            <small><strong>Uploaded at </strong>  {{image.time}}</small>
+            <small><strong>Author: </strong>{{image.uploader}}</small>
+            <small>Location: {{image.location}}</small>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+      </div>
+    </div>
+  {% endif %}
+  </div>
+</div>
+{% endblock %}
