@@ -5,7 +5,7 @@
 <div class="gallery">
     {% for data in Image%}
   <figure>
-    <img src="{{data.image.url}}" width="250" height="250" alt="{{data.name}}"/>
+    <img src="{{data.photoling.url}}" width="250" height="250" alt="{{data.name}}"/>
     <figcaption>{{data.name}} <br>
         <small><strong>Description: {{data.description}}</strong></small>
         <small><strong>Uploaded at </strong>  {{data.time}}</small>
