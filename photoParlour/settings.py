@@ -24,6 +24,7 @@ import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -150,4 +151,5 @@ cloudinary.config(
   api_key = "112565795471148", 
   api_secret = "IUiQXf6iaWkKuR7u1v0-zBoL_bc" 
 )
+
 django_heroku.settings(locals())
